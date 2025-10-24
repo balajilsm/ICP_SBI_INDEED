@@ -6,3 +6,4 @@ xgboost
 catboost
 sqlalchemy
 psycopg2-binary
+cx_Oracle
