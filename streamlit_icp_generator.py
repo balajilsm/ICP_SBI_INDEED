@@ -517,7 +517,7 @@ def generate_icp(df, config_df, selected_jobs, TARGET, JOB_COL):
 
 def main():
     # --- LOGO SECTION ---
-    logo_server_path = r'/icp_sbi_indeed/assets/ICPLOGO.png'
+    logo_server_path = r'/icp_sbi_indeed/ICPLOGO.png'
     try:
         if Path(logo_server_path).is_file():
             with open(logo_server_path, "rb") as image_file:
@@ -724,3 +724,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
