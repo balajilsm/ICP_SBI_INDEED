@@ -4,3 +4,5 @@ numpy
 scikit-learn
 xgboost
 catboost
+sqlalchemy
+psycopg2-binary
