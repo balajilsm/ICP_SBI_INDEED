@@ -1,10 +1,25 @@
-streamlit
-pandas
-numpy
-scikit-learn
-xgboost
-catboost
-sqlalchemy
-psycopg2-binary
-cx_Oracle
-openpyxl
+# Core Web App
+streamlit==1.38.0
+
+# Data Handling
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Machine Learning
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+catboost>=1.2.0
+
+# Database Connectivity
+sqlalchemy>=2.0.0
+oracledb>=1.3.0
+psycopg2-binary>=2.9.0
+
+# Utilities
+pathlib
+typing-extensions
+jsonschema
+
+# Optional (helps Streamlit performance)
+pyarrow
