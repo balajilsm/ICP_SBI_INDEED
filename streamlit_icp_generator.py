@@ -211,7 +211,7 @@ def get_oracle_engine(user, password, host, port, sid):
     """Creates and returns a SQLAlchemy engine for Oracle."""
     try:
         dsn = cx_Oracle.makedsn(host, port, sid=sid)
-        engine = create_engine(f"oracle+cx_oracle://{user}:{password}@{dsn}")
+        engine = create_engine(f"oracle+oracledb://{user}:{password}@{dsn}") //oracle+oracledb
         return engine
     except Exception as e:
         st.error(f"Failed to create database connection: {e}")
@@ -1174,4 +1174,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
