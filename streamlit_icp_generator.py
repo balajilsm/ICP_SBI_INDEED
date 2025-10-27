@@ -210,8 +210,12 @@ st.markdown("""
 def get_oracle_engine(user, password, host, port, sid):
     """Creates and returns a SQLAlchemy engine for Oracle."""
     try:
-        dsn = cx_Oracle.makedsn(host, port, sid=sid)
-        engine = create_engine(f"oracle+oracledb://{user}:{password}@{dsn}") //oracle+oracledb
+        url = (
+            "oracle+oracledb://"
+            f"{user}:{password}@{host}:{port}/"
+            f"?service_name={service_name_or_sid}"
+        )
+        engine = create_engine(url) //oracle+oracledb
         return engine
     except Exception as e:
         st.error(f"Failed to create database connection: {e}")
@@ -1174,5 +1178,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
