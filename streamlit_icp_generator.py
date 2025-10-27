@@ -47,9 +47,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.linear_model import LinearRegression
-from sqlalchemy import create_engine
-from sqlalchemy import text
-import cx_Oracle
+from sqlalchemy import create_engine, text
+import oracledb   # modern Oracle driver, works in thin mode
 import json
 import openpyxl
 from xgboost import XGBRegressor
@@ -1175,3 +1174,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
